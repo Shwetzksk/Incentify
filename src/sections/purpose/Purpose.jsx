@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './_purpose.module.scss'
-import PhoneStraight from '../../assets/icons/phone-staright.png' 
+import PhoneStraight from '../../assets/icons/phone-straight.png' 
 
 
 export default function Purpose() {
