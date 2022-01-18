@@ -11,6 +11,7 @@ export default function App() {
       <Landing />
       <Purpose />
       <Clubs />
+      <Purpose />
     </div>
   );
 }
