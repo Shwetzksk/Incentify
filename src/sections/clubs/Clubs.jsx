@@ -49,24 +49,24 @@ export default function Clubs() {
                     <img src={PhoneImage} alt="phone" />
                     <TextBox 
                     top="-5%" 
-                    left="-140%"
+                    left="-160%"
                     inView={inView}
                     delay={0}
                     content="⚡ A playlist curated by users with similar music taste & vibes" />
                 <TextBox 
                     top="20%"
-                    right="-145%"
+                    right="-165%"
                     inView={inView}
                     delay={1}
                     content="🎵 Share songs with friends in your Club, no matter which music app they use" />
                 <TextBox 
                     top="60%"
-                    left="-145%"
+                    left="-155%"
                     delay={2}
                     inView={inView}
                     content="💎 Discover hidden gems from Clubs on Incentify" />
                 <TextBox 
-                    top="90%"
+                    top="100%"
                     left="-20%"
                     delay={3}
                     inView={inView}
