@@ -2,11 +2,13 @@
   font-family: "Gilroy";
   src: url("./assets/fonts/Gilroy-Medium.woff");
 }
+
+html {
+  font-size: 62.5%;
+}
+
 body {
   margin: 0;
-  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif; */
   font-family: "Gilroy";
   font-size: 20;
   background: #151515;
@@ -15,24 +17,26 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
 * {
   margin: 0;
   padding: 0;
-  text-decoration: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-text-decoration: 0;
+          text-decoration: 0;
   color: inherit;
 }
+
 h1 {
   font-size: 65px;
   font-weight: 700;
 }
+
 h2 {
   font-size: 45px;
   font-weight: 700;
 }
+
 h3 {
   font-size: 36px;
   font-weight: 500;

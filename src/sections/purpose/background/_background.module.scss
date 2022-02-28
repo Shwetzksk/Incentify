@@ -1,0 +1,569 @@
+@use "../../../styles/main.scss" as *;
+
+.container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+.tile {
+  @include component-tile;
+  @include color-light-purple-gradient;
+  @include color-purpleBorder;
+  position: absolute;
+  //color
+  &_2,
+  &_4,
+  &_6,
+  &_8,
+  &_10,
+  &_12,
+  &_14,
+  &_16,
+  &_18,
+  &_20,
+  &_22,
+  &_24,
+  &_26,
+  &_28,
+  &_30,
+  &_32,
+  &_34,
+  &_36,
+  &_38,
+  &_40,
+  &_42,
+  &_44,
+  &_46,
+  &_48,
+  &_50,
+  &_52,
+  &_54,
+  &_56,
+  &_58,
+  &_60,
+  &_62,
+  &_64,
+  &_66,
+  &_68,
+  &_70,
+  &_72,
+  &_74,
+  &_76,
+  &_78,
+  &_80,
+  &_82,
+  &_84,
+  &_86,
+  &_88,
+  &_90,
+  &_92,
+  &_94,
+  &_96,
+  &_98,
+  &_100,
+  &_102,
+  &_104,
+  &_106,
+  &_108,
+  &_110,
+  &_112,
+  &_114,
+  &_116 {
+    @include color-dark-purple-gradient;
+  }
+  //right
+  &_1,
+  &_2,
+  &_3,
+  &_4,
+  &_5,
+  &_6,
+  &_7,
+  &_8,
+  &_9,
+  &_10,
+  &_11,
+  &_12,
+  &_13,
+  &_14,
+  &_15,
+  &_16,
+  &_17,
+  &_18,
+  &_19,
+  &_20,
+  &_21,
+  &_22,
+  &_23,
+  &_24,
+  &_25,
+  &_26,
+  &_27,
+  &_28,
+  &_29,
+  &_30,
+  &_31,
+  &_32,
+  &_33,
+  &_34,
+  &_35,
+  &_36,
+  &_37,
+  &_38,
+  &_39,
+  &_40,
+  &_41,
+  &_42,
+  &_43,
+  &_44,
+  &_45,
+  &_46,
+  &_47,
+  &_48,
+  &_49,
+  &_50 {
+    right: 0;
+    top: 510px;
+  }
+  &_1 {
+    transform: translate(0);
+  }
+  &_2 {
+    transform: translate(-70px, -80px);
+  }
+  &_3 {
+    transform: translate(-140px, 0);
+  }
+  &_4 {
+    transform: translate(-210px, -80px);
+  }
+  &_5 {
+    transform: translate(-140px, -160px);
+  }
+  &_6 {
+    transform: translate(-350px, -80px);
+  }
+  &_7 {
+    transform: translate(-280px, -160px);
+  }
+  &_8 {
+    transform: translate(-70px, 80px);
+  }
+  &_9 {
+    transform: translate(-420px, -160px);
+  }
+  &_10 {
+    transform: translate(-210px, -240px);
+  }
+  &_11 {
+    transform: translate(-140px, 160px);
+  }
+  &_12 {
+    transform: translate(-350px, -240px);
+  }
+  &_13 {
+    transform: translate(-280px, 160px);
+  }
+  &_14 {
+    transform: translate(-490px, -240px);
+  }
+  &_15 {
+    transform: translate(-280px, 330px);
+  }
+  &_16 {
+    transform: translate(-210px, 80px);
+  }
+  &_17 {
+    transform: translate(-420px, 200px);
+  }
+  &_18 {
+    transform: translate(-350px, 240px);
+  }
+  &_19 {
+    transform: translate(-415px, 330px);
+  }
+  &_20 {
+    transform: translate(-300px, 430px);
+  }
+  &_21 {
+    transform: translate(-230px, 500px);
+  }
+  &_22 {
+    transform: translate(-160px, 430px);
+  }
+  &_23 {
+    transform: translate(-90px, 500px);
+  }
+  &_24 {
+    transform: translate(-160px, 570px);
+  }
+  &_25 {
+    transform: translate(-230px, 640px);
+  }
+  &_26 {
+    transform: translate(-20px, 710px);
+  }
+  &_27 {
+    transform: translate(-90px, 640px);
+  }
+  &_28 {
+    transform: translate(-160px, 710px);
+  }
+  &_29 {
+    transform: translate(-90px, 790px);
+  }
+  &_30 {
+    transform: translate(-160px, 870px);
+  }
+  &_31 {
+    transform: translate(50px, 950px);
+  }
+  &_32 {
+    transform: translate(-20px, 870px);
+  }
+  &_33 {
+    transform: translate(-90px, 950px);
+  }
+  &_34 {
+    transform: translate(-20px, 1030px);
+  }
+  &_35 {
+    transform: translate(-230px, 950px);
+  }
+  &_36 {
+    transform: translate(-160px, 1030px);
+  }
+  &_37 {
+    transform: translate(-90px, 1110px);
+  }
+  &_38 {
+    transform: translate(-300px, 1030px);
+  }
+  &_39 {
+    transform: translate(-230px, 1110px);
+  }
+  &_40 {
+    transform: translate(-440px, 1190px);
+  }
+  &_41 {
+    transform: translate(-370px, 1110px);
+  }
+  &_42 {
+    transform: translate(-300px, 1190px);
+  }
+  &_43 {
+    transform: translate(-370px, 1270px);
+  }
+  &_44 {
+    transform: translate(-300px, 1350px);
+  }
+  &_45 {
+    transform: translate(-230px, 1270px);
+  }
+  &_46 {
+    transform: translate(-160px, 1350px);
+  }
+  //right-2
+  &_47,
+  &_48,
+  &_49,
+  &_50,
+  &_51,
+  &_52,
+  &_53,
+  &_54,
+  &_55,
+  &_56,
+  &_57,
+  &_58,
+  &_59,
+  &_60,
+  &_61,
+  &_62,
+  &_63,
+  &_64,
+  &_65,
+  &_66,
+  &_67,
+  &_68 {
+    right: 0;
+    top: 2200px;
+  }
+  &_47 {
+    transform: translate(0);
+  }
+  &_48 {
+    transform: translate(-70px, -80px);
+  }
+  &_49 {
+    transform: translate(-140px, 0);
+  }
+  &_50 {
+    transform: translate(-70px, 80px);
+  }
+  &_51 {
+    transform: translate(-140px, 160px);
+  }
+  &_52 {
+    transform: translate(-210px, 80px);
+  }
+  &_53 {
+    transform: translate(-280px, 160px);
+  }
+  &_54 {
+    transform: translate(-210px, 240px);
+  }
+  &_55 {
+    transform: translate(-140px, 320px);
+  }
+  &_56 {
+    transform: translate(-70px, 240px);
+  }
+  &_57 {
+    transform: translate(0, 320px);
+  }
+  &_58 {
+    transform: translate(-210px, 400px);
+  }
+  &_60 {
+    transform: translate(-70px, 400px);
+  }
+  &_61 {
+    transform: translate(-140px, 480px);
+  }
+  &_62 {
+    transform: translate(-70px, 560px);
+  }
+  &_63 {
+    transform: translate(0, 480px);
+  }
+  &_64 {
+    transform: translate(-70px, 720px);
+  }
+  &_65 {
+    transform: translate(-140px, 640px);
+  }
+  &_66 {
+    transform: translate(-210px, 720px);
+  }
+  &_67 {
+    transform: translate(0, 640px);
+  }
+  &_59 {
+    transform: translate(-140px, 800px);
+  }
+
+  //left
+  &_69,
+  &_68,
+  &_70,
+  &_71,
+  &_72,
+  &_73,
+  &_74,
+  &_75,
+  &_76,
+  &_77,
+  &_78,
+  &_79,
+  &_80,
+  &_81,
+  &_82 {
+    left: 0;
+    top: 813px;
+  }
+  &_68 {
+    transform: translate(0);
+  }
+  &_69 {
+    transform: translate(70px, 70px);
+  }
+  &_70 {
+    transform: translate(140px, 0);
+  }
+  &_71 {
+    transform: translate(210px, 70px);
+  }
+  &_72 {
+    transform: translate(280px, 280px);
+  }
+  &_73 {
+    transform: translate(350px, 70px);
+  }
+  &_74 {
+    transform: translate(140px, 140px);
+  }
+  &_75 {
+    transform: translate(350px, 210px);
+  }
+  &_76 {
+    transform: translate(280px, 140px);
+  }
+  &_77 {
+    transform: translate(490px, 210px);
+  }
+  &_78 {
+    transform: translate(420px, 140px);
+  }
+  &_79 {
+    transform: translate(350px, 350px);
+  }
+  &_80 {
+    transform: translate(420px, 280px);
+  }
+  &_81 {
+    transform: translate(210px, 350px);
+  }
+  &_82 {
+    transform: translate(280px, 280px);
+  }
+  // left 2
+  &_83,
+  &_84,
+  &_85,
+  &_86,
+  &_87,
+  &_89,
+  &_88,
+  &_90,
+  &_91,
+  &_92,
+  &_93,
+  &_94,
+  &_95,
+  &_96 {
+    left: 0;
+    top: 1500px;
+  }
+
+  &_82 {
+    transform: translate(280px, 0);
+  }
+  &_83 {
+    transform: translate(70px, 70px);
+  }
+  &_84 {
+    transform: translate(0);
+  }
+  &_85 {
+    transform: translate(210px, 70px);
+  }
+  &_86 {
+    transform: translate(140px, 0);
+  }
+  &_87 {
+    transform: translate(350px, 70px);
+  }
+  &_88 {
+    transform: translate(140px, 140px);
+  }
+  &_89 {
+    transform: translate(350px, 210px);
+  }
+  &_90 {
+    transform: translate(280px, 140px);
+  }
+  &_91 {
+    transform: translate(490px, 210px);
+  }
+  &_92 {
+    transform: translate(420px, 140px);
+  }
+  &_93 {
+    transform: translate(350px, 350px);
+  }
+  &_94 {
+    transform: translate(420px, 280px);
+  }
+  &_95 {
+    transform: translate(210px, 350px);
+  }
+  &_96 {
+    transform: translate(280px, 280px);
+  }
+  // left-3
+  &_97,
+  &_98,
+  &_99,
+  &_100,
+  &_101,
+  &_102,
+  &_103,
+  &_104,
+  &_105,
+  &_106,
+  &_107,
+  &_108,
+  &_109,
+  &_110,
+  &_111,
+  &_112,
+  &_113,
+  &_114,
+  &_115,
+  &_116 {
+    left: 0;
+    top: 2400px;
+  }
+  &_97 {
+    transform: translate(0);
+  }
+  &_98 {
+    transform: translate(70px, 70px);
+  }
+  &_99 {
+    transform: translate(140px, 0);
+  }
+  &_100 {
+    transform: translate(210px, 70px);
+  }
+  &_101 {
+    transform: translate(280px, 0);
+  }
+  &_102 {
+    transform: translate(350px, 70px);
+  }
+  &_103 {
+    transform: translate(420px, 140px);
+  }
+  &_104 {
+    transform: translate(70px, -70px);
+  }
+  &_105 {
+    transform: translate(280px, 140px);
+  }
+  &_106 {
+    transform: translate(210px, -70px);
+  }
+  &_107 {
+    transform: translate(280px, 280px);
+  }
+  &_108 {
+    transform: translate(350px, 210px);
+  }
+  &_109 {
+    transform: translate(140px, 280px);
+  }
+  &_110 {
+    transform: translate(210px, 210px);
+  }
+  &_111 {
+    transform: translate(140px, 420px);
+  }
+  &_112 {
+    transform: translate(210px, 350px);
+  }
+  &_113 {
+    transform: translate(0, 420px);
+  }
+  &_114 {
+    transform: translate(70px, 350px);
+  }
+  &_115 {
+    transform: translate(0, 570px);
+  }
+  &_116 {
+    transform: translate(70px, 490px);
+  }
+}

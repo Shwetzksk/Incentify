@@ -1,0 +1,319 @@
+@use "../../styles/main.scss" as *;
+
+%text-box {
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  height: fit-content;
+  text-align: left;
+  font-size: 2.3rem;
+  font-weight: 500;
+  background: linear-gradient(
+    92.32deg,
+    rgba(28, 40, 83, 0.2) 5.7%,
+    rgba(110, 69, 226, 0.2) 96.66%
+  );
+  /* glass effect */
+
+  box-shadow: 0px 4px 20px -1px #000000;
+  backdrop-filter: blur(20px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 25px;
+  border: 2.5px solid rgba(110, 69, 226, 0.2);
+}
+.title {
+  font-size: 6.5rem;
+}
+.container {
+  padding: 0 160px;
+  position: relative;
+  &::before {
+    content: "";
+    position: fixed;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: url("../../assets/images/concert.png") center top;
+    background-size: cover;
+  }
+}
+.section {
+  overflow: hidden;
+  height: 100vh;
+  &_1 {
+    padding: 3% 0;
+  }
+  &_2 {
+  }
+  &_3 {
+  }
+  &_4 {
+    height: auto;
+  }
+}
+.section_container {
+  position: relative;
+  padding: 3% 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.text_box {
+  @extend %text-box;
+  p {
+    margin: 15px 0;
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: left;
+  }
+  &_1 {
+    width: 500px;
+  }
+  &_2 {
+    width: 502px;
+  }
+  &_3 {
+    width: 560px;
+  }
+}
+.section_1 {
+  .section_container {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    place-items: center start;
+  }
+  .right {
+    grid-column: 7/13;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.6s 0.6s ease-in;
+    .brandLogo {
+      position: absolute;
+      transition: transform 0.6s ease-in;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      &_amazonmusic {
+        transform: translate(-220%, -200%);
+      }
+      &_spotify {
+        transform: translate(10%, -180%);
+      }
+      &_applemusic {
+        transform: translate(-100%, -80%);
+      }
+      &_youtubemusic {
+        transform: translate(10%, 20%);
+      }
+      &_tidal {
+        transform: translate(-150%, 60%);
+      }
+      &_deezer {
+        transform: translate(-20%, 240%);
+      }
+    }
+  }
+  .left {
+    grid-column: 1/7;
+  }
+}
+.section_2 {
+  display: flex;
+  align-items: center;
+}
+.section_3 {
+  .right {
+    margin: auto 0;
+    img {
+      width: 300px;
+    }
+  }
+  .left {
+    grid-column: 1/8;
+  }
+}
+.section_4 {
+  position: relative;
+  padding: {
+    top: 3%;
+    bottom: 4%;
+  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1 {
+    font-size: 4.5rem;
+    text-align: center;
+  }
+  ul {
+    margin: 50px auto 20px auto;
+    list-style: none;
+    li {
+      text-align: left;
+      font-size: 2.8rem;
+      margin: 25px 0;
+    }
+  }
+}
+.background {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(21, 21, 21, 1);
+  z-index: -1;
+}
+.tile {
+  @include component-tile;
+  @include color-light-purple-gradient;
+  @include color-purpleBorder;
+  position: absolute;
+  top: 0;
+  &_1,
+  &_2,
+  &_3,
+  &_4,
+  &_5,
+  &_6,
+  &_7,
+  &_8,
+  &_9,
+  &_10,
+  &_11,
+  &_12 {
+    left: 0;
+  }
+  &_13,
+  &_14,
+  &_15,
+  &_16,
+  &_17,
+  &_18,
+  &_19,
+  &_20,
+  &_21,
+  &_22,
+  &_23,
+  &_24,
+  &_25,
+  &_26,
+  &_27,
+  &_28 {
+    right: 0;
+  }
+
+  &_1,
+  &_3,
+  &_5,
+  &_9,
+  &_11,
+  &_12,
+  &_13,
+  &_15,
+  &_17,
+  &_22,
+  &_26,
+  &_25,
+  &_27 {
+    @include color-dark-purple-gradient;
+  }
+  &_1 {
+    transform: translate(0, 70px);
+  }
+  &_2 {
+    transform: translate(70px, 0);
+  }
+  &_3 {
+    transform: translate(140px, 70px);
+  }
+  &_4 {
+    transform: translate(210px, 0);
+  }
+  &_5 {
+    transform: translate(280px, 70px);
+  }
+  &_6 {
+    transform: translate(350px, 0);
+  }
+  &_7 {
+    transform: translate(70px, 140px);
+  }
+  &_8 {
+    transform: translate(210px, 140px);
+  }
+  &_9 {
+    transform: translate(0, 220px);
+  }
+  &_10 {
+    transform: translate(70px, 300px);
+  }
+  &_11 {
+    transform: translate(0, 380px);
+  }
+  &_12 {
+    transform: translate(140px, 380px);
+  }
+  &_13 {
+    transform: translate(-50px, 70px);
+  }
+  &_14 {
+    transform: translate(-120px, 0);
+  }
+  &_15 {
+    transform: translate(-190px, 70px);
+  }
+  &_16 {
+    transform: translate(-260px, 0);
+  }
+  &_17 {
+    transform: translate(-330px, 70px);
+  }
+  &_18 {
+    transform: translate(-400px, 0);
+  }
+  &_19 {
+    transform: translate(20px, 140px);
+  }
+  &_20 {
+    transform: translate(-120px, 140px);
+  }
+  &_21 {
+    transform: translate(-260px, 140px);
+  }
+  &_22 {
+    transform: translate(-50px, 210px);
+  }
+  &_23 {
+    transform: translate(20px, 290px);
+  }
+  &_24 {
+    transform: translate(-120px, 290px);
+  }
+  &_25 {
+    transform: translate(-50px, 375px);
+  }
+  &_26 {
+    transform: translate(-185px, 375px);
+  }
+}
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(360deg, #1c2853 0%, #6e45e2 147.36%);
+  width: 100%;
+  padding: 10px 0;
+
+  p {
+    font-size: 2.8rem;
+    margin: {
+      right: 30px;
+    }
+  }
+}

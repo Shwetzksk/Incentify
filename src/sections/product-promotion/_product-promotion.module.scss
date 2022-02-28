@@ -1,0 +1,35 @@
+@use "../../styles/color" as color;
+
+.container {
+	margin: 70px 0;
+}
+.signup {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgba(14, 14, 14, 1);
+	padding: 30px 0;
+	h1 {
+		@include color.title;
+		font-size: 6.5rem;
+		margin: {
+			right: 40px;
+		}
+	}
+	.btnContainer {
+		z-index: 10;
+	}
+}
+.socialMedia_posts {
+	margin: 100px 0;
+	h1 {
+		font-size: 4.5rem;
+		text-align: center;
+	}
+	.posts {
+		display: flex;
+		justify-content: space-evenly;
+		padding: 50px 0;
+	}
+}

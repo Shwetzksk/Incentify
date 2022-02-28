@@ -1,40 +1,47 @@
-import React from 'react'
-import IncentifyLogo from '../../assets/icons/logo-text.png'
-import InstagramLogo from '../../assets/icons/instagram.svg'
-import TwitterLogo from '../../assets/icons/twitter.png'
-import SubstackLogo from '../../assets/icons/substack.png'
-import MediumLogo from '../../assets/icons/medium.svg'
-import styles from './_navbar.module.scss'
+import React, { useState } from "react";
+import IncentifyLogo from "../../assets/icons/logo-text.png";
+import { Link } from "react-router-dom";
+import styles from "./_navbar.module.scss";
+import SocialMedias from "../social-medias/Social-medias";
 
-
-export default function Navbar() {
-    return (
-        <div className={styles.container}>
-            <div className={styles.logo}>
-                <img src={IncentifyLogo} alt="inentify logo" />
-            </div>
-            <div className={styles.menu}>
-                <div className={styles.links}>
-                    <div>
-                        Introducing Clubs ⚡
-                    </div>
-                    <div>
-                        About
-                    </div>
-                    <div>
-                        Blog
-                    </div>
-                    <div>
-                        Contact
-                    </div>
-                </div>
-                <div className={styles.socials}>
-                    <img src={InstagramLogo} alt="instagram" />
-                    <img src={TwitterLogo} alt="twitter" />
-                    <img src={SubstackLogo} alt="substack" />
-                    <img src={MediumLogo} alt="medium" />
-                </div>
-            </div>
+function Links() {
+  return (
+    <div className={styles.menu}>
+      <div className={styles.links}>
+        <div>
+          <a href="#introducing-club">Introducing Clubs ⚡</a>
         </div>
-    )
+        <div>
+          <Link to="/about">About</Link>
+        </div>
+        <div>Blog</div>
+        <div>Contact</div>
+      </div>
+      <SocialMedias />
+    </div>
+  );
+}
+export default function Navbar() {
+  const [showMenu, setShowMenu] = useState(false);
+  return (
+    <div className={styles.container}>
+      <div className={styles.logo}>
+        <Link to="/">
+          <img src={IncentifyLogo} alt="inentify logo" />
+        </Link>
+      </div>
+      <div className={`${styles.menuIcon}`}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div
+        className={`${styles.menu_container} ${
+          showMenu && styles.menu_container_mobile
+        }`}
+      >
+        <Links />
+      </div>
+    </div>
+  );
 }

@@ -1,0 +1,8 @@
+@mixin tile {
+  width: 70px;
+  height: 101px;
+  border-radius: 16.6466px;
+  opacity: 0.5;
+  box-shadow: 0px 2.66346px 13.3173px -0.665865px #000000;
+  backdrop-filter: blur(13.3173px);
+}

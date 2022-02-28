@@ -1,0 +1,23 @@
+.container {
+  position: relative;
+  // width: 360px;
+  background: linear-gradient(
+    112.65deg,
+    rgba(110, 69, 226, 0.15) 1.05%,
+    rgba(203, 203, 203, 0) 100%
+  );
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: auto;
+}
+.icon {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+}
+.post {
+  border-radius: 25px;
+}

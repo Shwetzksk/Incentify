@@ -1,0 +1,40 @@
+@font-face {
+	font-family: "Gilroy";
+	src: url("./assets/fonts/Gilroy-Medium.woff");
+}
+html {
+	font-size: 62.5%;
+}
+//colors
+$purple: rgba(110, 69, 226, 1);
+$light-purple: rgba(110, 69, 226, 0.3);
+$blue: rgba(28, 40, 83, 1);
+
+body {
+	margin: 0;
+	font-family: "Gilroy";
+	font-size: 20;
+	background: #151515;
+	color: #fff;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: 0;
+	color: inherit;
+}
+h1 {
+	font-size: 65px;
+	font-weight: 700;
+}
+h2 {
+	font-size: 45px;
+	font-weight: 700;
+}
+h3 {
+	font-size: 36px;
+	font-weight: 500;
+}

@@ -1,17 +1,19 @@
-import * as React from 'react'
-import Landing from './sections/landing/Landing';
-import Navbar from './components/navbar/Navbar';
-import Purpose from './sections/purpose/Purpose';
-import Clubs from './sections/clubs/Clubs';
+import React from "react";
+import Navbar from "./components/navbar/Navbar";
+import Footer from "./sections/Footer/Footer";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home/Home";
+import About from "./pages/About/About";
 
 export default function App() {
   return (
     <div className="App">
       <Navbar />
-      <Landing />
-      <Purpose />
-      <Clubs />
-      <Purpose />
+      {/* <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="about" element={<About />} />
+      </Routes> */}
+      <Footer />
     </div>
   );
 }
