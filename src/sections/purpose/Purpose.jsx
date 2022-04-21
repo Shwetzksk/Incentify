@@ -12,6 +12,10 @@ import spotify from "../../assets/brands/spotify-sm-logo.png";
 import johnlegendGif from "../../assets/gif/jhonlegend.gif";
 import drakeGif from "../../assets/gif/drake.gif";
 import Card from "./card/card";
+import startClubImg from "../../assets/images/start-a-club.png";
+import inviteImg from "../../assets/images/invite.png";
+import chatImg from "../../assets/images/chat.png";
+import addSongsImg from "../../assets/images/add-songs.png";
 
 const productSpecs = [
   {
@@ -60,8 +64,15 @@ export default function Purpose() {
             😩
           </h2>
 
-          <motion.div ref={purposeRef_1}>
-            <TextBox top="28%" left="8.5%" inView={purposeInview_1} delay={0}>
+          <motion.div
+            ref={purposeRef_1}
+            className={`${styles.textbox_container}`}
+          >
+            <TextBox
+              inView={purposeInview_1}
+              delay={0}
+              className={`${styles.textbox} ${styles.textbox_1}`}
+            >
               <span className={`${styles.emoji}`}>🔗</span>
               <p>
                 {" "}
@@ -70,11 +81,9 @@ export default function Purpose() {
               </p>
             </TextBox>
             <TextBox
-              top="48.5%"
-              left="14%"
-              width="440px"
               inView={purposeInview_1}
-              delay={1.5}
+              delay={0.25}
+              className={`${styles.textbox} ${styles.textbox_2}`}
             >
               <div className={`${styles.musicApp_img} `}>
                 <img
@@ -89,17 +98,19 @@ export default function Purpose() {
                 />
               </div>
               <p>
-                With so many streaming apps,
-                <br />
-                sharing across platforms isn't possible{" "}
+                With so many streaming apps, sharing across platforms isn't
+                possible{" "}
               </p>
             </TextBox>
-            <TextBox top="69%" left="20%" inView={purposeInview_1} delay={2}>
+            <TextBox
+              inView={purposeInview_1}
+              delay={0.5}
+              className={`${styles.textbox} ${styles.textbox_3}`}
+            >
               <span className={`${styles.emoji}`}>🎵</span>
               <p>
-                You discover a banger & want to show <br />
-                off your music taste on Instagram/Twitter, but
-                <br /> does anyone even care?{" "}
+                You discover a banger & want to show off your music taste on
+                Instagram / Twitter, but does anyone even care?{" "}
               </p>
             </TextBox>
           </motion.div>
@@ -125,28 +136,42 @@ export default function Purpose() {
         <div className={`${styles.textcont} ${styles.right}`}>
           <h2 className={styles.title}>
             <span className={styles.bold}>
-              Music discovery has <br />
-              become boring
+              Music discovery has become boring
             </span>
             😴
           </h2>
-          <motion.div ref={purposeRef_2}>
-            <TextBox top="26%" left="-1%" inView={purposeInview_2} delay={0}>
+          <motion.div
+            ref={purposeRef_2}
+            className={`${styles.textbox_container}`}
+          >
+            <TextBox
+              inView={purposeInview_2}
+              delay={0}
+              className={`${styles.textbox} ${styles.textbox_1}`}
+            >
               <span className={`${styles.emoji}`}>🤷</span>
               <p>Streaming apps don't get your music taste</p>
             </TextBox>
-            <TextBox top="47%" left="5%" inView={purposeInview_2} delay={2}>
+            <TextBox
+              inView={purposeInview_2}
+              delay={0.25}
+              className={`${styles.textbox} ${styles.textbox_2}`}
+            >
               <span className={`${styles.emoji}`}>📈 </span>
               <p>
-                60,000 songs drop on Spotify daily,
-                <br /> but not even 1% break out of the noise
+                60,000 songs drop on Spotify daily, but not even 1% break out of
+                the noise
               </p>
             </TextBox>
-            <TextBox top="68%" left="15%" inView={purposeInview_2} delay={3}>
+            <TextBox
+              inView={purposeInview_2}
+              delay={0.5}
+              className={`${styles.textbox} ${styles.textbox_3}`}
+            >
               <span className={`${styles.emoji}`}>⚡ </span>
               <p>
-                Recommendations from friends who <br />
-                share your vibe, always hit different{" "}
+                Recommendations from friends who share your vibe, always hit
+                different{" "}
               </p>
             </TextBox>
           </motion.div>
@@ -162,59 +187,83 @@ export default function Purpose() {
         <div className={`${styles.textcont} ${styles.center}`}>
           <div className={`${styles.phone} ${styles.center}`}>
             <img
-              src={productSample}
+              src={startClubImg}
               alt="product sample"
-              className={`${styles.product_sample_gif}`}
+              className={`${styles.product_sample_gif} ${styles.product_sample} ${styles.product_sample_1}`}
+            />
+            <img
+              src={addSongsImg}
+              alt="product sample"
+              className={`${styles.product_sample_gif} ${styles.product_sample} ${styles.product_sample_2}`}
+            />
+            <img
+              src={inviteImg}
+              alt="product sample"
+              className={`${styles.product_sample_gif} ${styles.product_sample} ${styles.product_sample_3}`}
+            />
+            <img
+              src={chatImg}
+              alt="product sample"
+              className={`${styles.product_sample_gif} ${styles.product_sample} ${styles.product_sample_4}`}
             />
           </div>
 
-          <motion.div ref={purposeRef_3}>
-            <TextBox top="5%" left="8%" inView={purposeInview_3} delay={0}>
+          <motion.div
+            ref={purposeRef_3}
+            className={`${styles.textbox_container}`}
+          >
+            <TextBox
+              inView={purposeInview_3}
+              delay={0}
+              className={`${styles.textbox} ${styles.textbox_1}`}
+            >
               <span className={`${styles.emoji}`}>⚡</span>
               <p>
-                A playlist curated by users <br />
-                with similar music taste & vibes
+                A playlist curated by users with similar music taste & vibes
               </p>
             </TextBox>
             <TextBox
-              top="30%"
-              right="6%"
-              width="440px"
               inView={purposeInview_3}
-              delay={2}
+              delay={0.25}
+              className={`${styles.textbox} ${styles.textbox_2}`}
             >
               <span className={`${styles.emoji}`}>🎵 </span>
               <p>
-                Share songs with friends in your
-                <br /> Club, no matter which music app <br />
+                Share songs with friends in your Club, no matter which music app
                 they use
               </p>
             </TextBox>
             <TextBox
-              top="60%"
-              left="11%"
-              width="536px"
+              className={`${styles.textbox} ${styles.textbox_3}`}
               inView={purposeInview_3}
-              delay={3}
+              delay={0.5}
             >
               <span className={`${styles.emoji}`}>💎</span>
-              <p>
-                Discover hidden gems from <br />
-                Clubs on Incentify
-              </p>
+              <p>Discover hidden gems from Clubs on Incentify</p>
             </TextBox>
             <TextBox
-              top="103%"
-              right="34%"
-              width="536px"
+              className={`${styles.textbox} ${styles.textbox_4}`}
               inView={purposeInview_3}
-              delay={3}
+              delay={0.75}
             >
-              <span className={`${styles.emoji} ${styles.text}`}>💎</span>
-              <p className={`${styles.text}`}>
-                Discover hidden gems from <br />
-                Clubs on Incentify
-              </p>
+              <div className={`${styles.texts}`}>
+                <div className={`${styles.text} ${styles.text_1}`}>
+                  <span className={`${styles.emoji} `}>🔥</span>
+                  <p>Think you've got great taste? Start a club now</p>
+                </div>
+                <div className={`${styles.text} ${styles.text_2}`}>
+                  <span className={`${styles.emoji} `}>🎵</span>
+                  <p>Show-off your curation skills & Add music</p>
+                </div>
+                <div className={`${styles.text} ${styles.text_3}`}>
+                  <span className={`${styles.emoji} `}>🤝</span>
+                  <p>Invite friends to join as collaborators</p>
+                </div>
+                <div className={`${styles.text} ${styles.text_4}`}>
+                  <span className={`${styles.emoji} `}>🗣️</span>
+                  <p>Chat away! Banter knows no limit when it comes to music</p>
+                </div>
+              </div>
             </TextBox>
           </motion.div>
         </div>

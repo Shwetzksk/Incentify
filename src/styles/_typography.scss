@@ -1,0 +1,126 @@
+@use "./media-queries" as *;
+
+//weight
+$thin: 100;
+$ultra-light: 200;
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+$extra-bold: 800;
+$black: 900;
+$heavy: 950;
+//sizes
+$size-65: 6.5rem;
+$size-50: 5rem;
+$size-55: 5.5rem;
+$size-48: 4.8rem;
+$size-45: 4.5rem;
+$size-36: 3.6rem;
+$size-20: 2rem;
+$size-24: 2.4rem;
+$size-28: 2.8rem;
+$size-25: 2.5rem;
+$size-20: 2rem;
+$size-18: 1.8rem;
+$size-16: 1.6rem;
+$size-15: 1.5rem;
+$size-13: 1.3rem;
+
+@mixin title {
+  font-weight: $bold;
+  font-size: $size-45;
+  @include mobile-md-up {
+    font-size: $size-48;
+  }
+  @include tablet-md-up {
+    font-size: $size-65;
+  }
+}
+@mixin header-1 {
+  font-size: $size-36;
+  font-weight: $bold;
+  @include laptop-sm-up {
+    font-size: $size-65;
+  }
+}
+@mixin header-2 {
+  font-size: $size-25;
+  font-weight: $bold;
+  @include laptop-sm-up {
+    font-size: $size-65;
+  }
+}
+@mixin header-3 {
+  font-size: $size-36;
+  font-weight: $bold;
+  @include laptop-sm-up {
+    font-size: $size-45;
+  }
+}
+@mixin header-4 {
+  font-size: $size-25;
+  font-weight: $bold;
+  @include laptop-sm-up {
+    font-size: $size-45;
+  }
+}
+@mixin header-5 {
+  font-size: $size-13;
+  font-weight: $bold;
+  @include laptop-sm-up {
+    font-size: $size-28;
+  }
+}
+
+@mixin body-1 {
+  font-size: $size-16;
+  font-weight: $medium;
+  @include laptop-sm-up {
+    font-size: $size-28;
+  }
+}
+@mixin body-2 {
+  font-size: $size-13;
+  font-weight: $medium;
+  @include mobile-lg-up {
+    font-size: $size-18;
+  }
+  @include tablet-lg-up {
+    font-size: $size-20;
+  }
+  @include laptop-sm-up {
+    font-size: $size-24;
+  }
+  @include laptop-lg-up {
+    font-size: $size-28;
+  }
+}
+@mixin body-3 {
+  font-size: $size-13;
+  @include mobile-md-up {
+    font-size: $size-16;
+  }
+  @include tablet-md-up {
+    font-size: $size-20;
+  }
+}
+@mixin body-4 {
+  font-size: $size-13;
+  @include tablet-sm-up {
+    font-size: $size-15;
+  }
+  @include tablet-md-up {
+    font-size: $size-16;
+  }
+  @include laptop-sm-up {
+    font-size: $size-20;
+  }
+}
+@mixin body-5 {
+  font-size: $size-12;
+  @include laptop-sm-up {
+    font-size: $size-18;
+  }
+}

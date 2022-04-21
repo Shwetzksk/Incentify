@@ -1,0 +1,52 @@
+@use "../../styles/main.scss" as *;
+
+.emailSignup {
+  margin: auto;
+  background: var(--black-dark);
+  border: 1px solid var(--secondary-1);
+  border-radius: 25px;
+  display: flex;
+  @include screen-mobile-md-down {
+    border-radius: 20px;
+  }
+  input,
+  button {
+    &:focus {
+      outline: none;
+    }
+    padding: 18px;
+    border-radius: 25px;
+  }
+  input {
+    @include typography-body-3;
+    border: 0;
+    background: transparent;
+    ::placeholder {
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+  button {
+    @include typography-body-3;
+    background-color: var(--primary);
+    border: 1px solid var(--secondary-1);
+    padding: {
+      left: 25px;
+      right: 25px;
+    }
+    @include screen-mobile-md-down {
+      border-radius: 20px;
+    }
+    @include screen-mobile-md-up {
+      padding: {
+        left: 30px;
+        right: 30px;
+      }
+    }
+    @include screen-mobile-lg-up {
+      padding: {
+        left: 40px;
+        right: 40px;
+      }
+    }
+  }
+}

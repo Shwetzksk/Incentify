@@ -8,10 +8,35 @@ import { MediumLogo } from "phosphor-react";
 function SocialMedias() {
   return (
     <div className={`${styles.container}`}>
-      <img src={instagramImg} alt="substack" className={styles.icon} />
-      <img src={twitterImg} alt="substack" className={styles.icon} />
-      <img src={SubstackLogo} alt="substack" className={styles.icon} />
-      <MediumLogo size={30} weight="fill" className={styles.icon} />
+      <a
+        href=" https://www.instagram.com/clubincentify/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img src={instagramImg} alt="substack" className={styles.icon} />
+      </a>
+
+      <a
+        href="https://twitter.com/clubincentify"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img src={twitterImg} alt="substack" className={styles.icon} />
+      </a>
+      <a
+        href=" https://incentify.substack.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img src={SubstackLogo} alt="substack" className={styles.icon} />
+      </a>
+      <a
+        href=" https://medium.com/@clubincentify"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <MediumLogo size={30} weight="fill" className={styles.icon} />
+      </a>
     </div>
   );
 }

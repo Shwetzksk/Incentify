@@ -6,3 +6,12 @@
   box-shadow: 0px 2.66346px 13.3173px -0.665865px #000000;
   backdrop-filter: blur(13.3173px);
 }
+@mixin title {
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(360deg, #1c2853 0%, #6e45e2 147.36%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@mixin purpleBorder {
+  border: 1.5px solid rgba(110, 69, 226, 0.1);
+}

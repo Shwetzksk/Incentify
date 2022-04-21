@@ -1,0 +1,138 @@
+//mobile
+$mobile-sm: 320px;
+$mobile-md: 375px;
+$mobile-lg: 480px;
+//tablet
+$tablet-sm: 600px;
+$tablet-md: 800px;
+$tablet-lg: 1024px;
+//laptop
+$laptop-sm: 1280px;
+$laptop-md: 1366px;
+$laptop-lg: 1440px;
+$laptop-xl: 1536px;
+//desktop
+$desktop: 1920px;
+
+//--------------------- MEDIA QUERIES -----------------------------
+//320px
+@mixin mobile-sm-up {
+  @media (min-width: $mobile-sm) {
+    @content;
+  }
+}
+@mixin mobile-sm-down {
+  @media (max-width: $mobile-sm) {
+    @content;
+  }
+}
+//375px
+@mixin mobile-md-up {
+  @media (min-width: $mobile-md) {
+    @content;
+  }
+}
+@mixin mobile-md-down {
+  @media (max-width: $mobile-md) {
+    @content;
+  }
+}
+//480px
+@mixin mobile-lg-up {
+  @media (min-width: $mobile-lg) {
+    @content;
+  }
+}
+@mixin mobile-lg-down {
+  @media (max-width: $mobile-lg) {
+    @content;
+  }
+}
+//600px
+@mixin tablet-sm-up {
+  @media (min-width: $tablet-sm) {
+    @content;
+  }
+}
+@mixin tablet-sm-down {
+  @media (max-width: $tablet-sm) {
+    @content;
+  }
+}
+//768px
+@mixin tablet-md-up {
+  @media (min-width: $tablet-md) {
+    @content;
+  }
+}
+@mixin tablet-md-down {
+  @media (max-width: $tablet-md) {
+    @content;
+  }
+}
+//1024px
+@mixin tablet-lg-up {
+  @media (min-width: $tablet-lg) {
+    @content;
+  }
+}
+@mixin tablet-lg-down {
+  @media (max-width: $tablet-lg) {
+    @content;
+  }
+}
+//1280px
+@mixin laptop-sm-up {
+  @media (min-width: $laptop-sm) {
+    @content;
+  }
+}
+@mixin laptop-sm-down {
+  @media (max-width: $laptop-sm) {
+    @content;
+  }
+}
+//1366px
+@mixin laptop-md-up {
+  @media (min-width: $laptop-md) {
+    @content;
+  }
+}
+@mixin laptop-md-down {
+  @media (max-width: $laptop-md) {
+    @content;
+  }
+}
+//1440px
+@mixin laptop-lg-up {
+  @media (min-width: $laptop-lg) {
+    @content;
+  }
+}
+@mixin laptop-lg-down {
+  @media (max-width: $laptop-lg) {
+    @content;
+  }
+}
+//1536px
+@mixin laptop-xl-up {
+  @media (min-width: $laptop-xl) {
+    @content;
+  }
+}
+@mixin laptop-xl-down {
+  @media (max-width: $laptop-xl) {
+    @content;
+  }
+}
+//1920px
+@mixin desktop-up {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}
+@mixin desktop-down {
+  @media (max-width: $desktop) {
+    @content;
+  }
+}

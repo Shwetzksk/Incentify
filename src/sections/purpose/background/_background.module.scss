@@ -3,13 +3,14 @@
 .container {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: fit-content;
   top: 0;
+  z-index: -1;
 }
 .tile {
   @include component-tile;
-  @include color-light-purple-gradient;
-  @include color-purpleBorder;
+  @include palette-light-purple-gradient;
+  @include component-purpleBorder;
   position: absolute;
   //color
   &_2,
@@ -70,7 +71,7 @@
   &_112,
   &_114,
   &_116 {
-    @include color-dark-purple-gradient;
+    @include palette-dark-purple-gradient;
   }
   //right
   &_1,
@@ -125,6 +126,9 @@
   &_50 {
     right: 0;
     top: 510px;
+    @media (max-width: 768px) {
+      right: -30%;
+    }
   }
   &_1 {
     transform: translate(0);
@@ -289,6 +293,9 @@
   &_68 {
     right: 0;
     top: 2200px;
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
   &_47 {
     transform: translate(0);
@@ -372,6 +379,9 @@
   &_82 {
     left: 0;
     top: 813px;
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
   &_68 {
     transform: translate(0);
@@ -435,6 +445,9 @@
   &_96 {
     left: 0;
     top: 1500px;
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 
   &_82 {
@@ -505,6 +518,10 @@
   &_116 {
     left: 0;
     top: 2400px;
+    @media (max-width: 768px) {
+      left: -40%;
+      z-index: -1;
+    }
   }
   &_97 {
     transform: translate(0);

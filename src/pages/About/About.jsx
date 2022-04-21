@@ -4,6 +4,7 @@ import { motion, useAnimation } from "framer-motion";
 import styles from "./_about.module.scss";
 import Button from "../../components/button/Button";
 //images
+import appleSpotify from "../../assets/brands/apple-spotify.png";
 import amazonmusicLogo from "../../assets/brands/amazon-music-logo.png";
 import spotifyLogo from "../../assets/brands/spotify-logo.png";
 import applemusicLogo from "../../assets/brands/apple-music-logo.png";
@@ -15,16 +16,20 @@ import productSampleGif from "../../assets/gif/product-sample.gif";
 
 function About() {
   const { ref: ref_1, inView: inview_1 } = useInView({
-    threshold: 0.6,
+    threshold: 0.5,
+    triggerOnce: true,
   });
   const { ref: ref_2, inView: inview_2 } = useInView({
     threshold: 0.5,
+    triggerOnce: true,
   });
   const { ref: ref_3, inView: inview_3 } = useInView({
-    threshold: 0.6,
+    threshold: 0.5,
+    triggerOnce: true,
   });
   const { ref: ref_4, inView: inview_4 } = useInView({
-    threshold: 0.8,
+    threshold: 0.5,
+    triggerOnce: true,
   });
   const textbox1_control = useAnimation();
   const textbox2_control = useAnimation();
@@ -37,6 +42,9 @@ function About() {
   const item_3_control = useAnimation();
   const item_4_control = useAnimation();
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   //section-1
   useEffect(() => {
     if (inview_1) {
@@ -199,8 +207,8 @@ function About() {
   return (
     <>
       <section className={`${styles.container}`}>
-        <div ref={ref_1} className={`${styles.section} ${styles.section_1}`}>
-          <h1 className={`${styles.title}`}>About us</h1>
+        <h1 className={`${styles.title}`}>About Us</h1>
+        <div ref={ref_1} className={` ${styles.section_1}`}>
           <div className={`${styles.section_container}`}>
             <motion.div
               className={`${styles.left} ${styles.text_box} ${styles.text_box_1}`}
@@ -208,7 +216,7 @@ function About() {
             >
               <p>
                 The idea for Incentify was born out of the simple problem around
-                how cluttered the entire experience of sharing music was
+                how cluttered the entire experience of sharing music was.
               </p>
               <p>
                 As we began speaking to users, we understood how music was much
@@ -217,7 +225,7 @@ function About() {
               <p>
                 Yet, Spotify, Apple Music & other streaming apps, do not bother
                 to add social features, as it would undermine their proprietary
-                music recommendation algorithms.
+                recommendation algorithms.
               </p>
               <p>However, these recommendations don't quite cut it, do they?</p>
             </motion.div>
@@ -273,7 +281,7 @@ function About() {
             </motion.div>
           </div>
         </div>
-        <div ref={ref_2} className={`${styles.section} ${styles.section_2}`}>
+        <div ref={ref_2} className={` ${styles.section_2}`}>
           <div className={`${styles.section_container}`}>
             <motion.div
               className={`${styles.left}`}
@@ -285,7 +293,7 @@ function About() {
               className={`${styles.text_box} ${styles.text_box_2} ${styles.right}`}
               animate={textbox2_control}
             >
-              <p>There are 8 million artists on Spotify</p>
+              <p>There are 8 million artists on Spotify.</p>
               <p>
                 Yet less than 1% of them make enough money to survive on their
                 music.
@@ -293,7 +301,7 @@ function About() {
               <p>
                 So many great songs are lost within the libraries of streaming
                 platforms, & discovering new tunes via the algorithmic playlists
-                is a trial & error approach at best{" "}
+                is a trial & error approach at best
               </p>
               <p>
                 Compare this with a recommendation from your friend with similar
@@ -302,25 +310,36 @@ function About() {
             </motion.div>
           </div>
         </div>
-        <div className={`${styles.section} ${styles.section_3}`} ref={ref_3}>
+        <div className={` ${styles.section_3}`} ref={ref_3}>
           <div className={`${styles.section_container}`}>
             <motion.div
               className={`${styles.text_box} ${styles.text_box_3} ${styles.left}`}
               animate={textbox3_control}
             >
-              <p>Keeping this in mind, we decided to introduce Clubs</p>
+              <p>Keeping this in mind, we decided to introduce Clubs.</p>
               <p>
-                which lets users share and discover music within sub-communities
-                of other users sharing similar tastes.
+                Clubs let users share and discover music within sub-communities
+                of other users having similar tastes.
               </p>
-              <p>
-                Paste song links, import your existing playlist from Spotify &
-                Apple Music, or simply search for music & share it with everyone
-                in your Club.
-              </p>
+              <ul className={`${styles.lists}`}>
+                <li>
+                  <span>🔗</span>
+                  <p>Share song links in the Club chat</p>
+                </li>
+                <li>
+                  <span>
+                    <img src={appleSpotify} alt="app icons" />
+                  </span>
+                  <p>Import your playlists from Spotify & Apple Music</p>
+                </li>
+                <li>
+                  <span>🎵</span>
+                  <p>Search & share music with everyone in your Club.</p>
+                </li>
+              </ul>
               <p>
                 Not just that, link your existing Spotify and Apple Music
-                accounts and listen to music within the Clubs itself
+                accounts and listen to music within the Clubs
               </p>
               <p>
                 We weren't kidding when we said this is the new Social Network
@@ -336,7 +355,7 @@ function About() {
           </div>
         </div>
       </section>
-      <div className={`${styles.section} ${styles.section_4}`} ref={ref_4}>
+      <div className={` ${styles.section_4}`} ref={ref_4}>
         <div className={`${styles.background}`}>
           <div className={`${styles.tile} ${styles.tile_1}`}></div>
           <div className={`${styles.tile} ${styles.tile_2}`}></div>
@@ -365,19 +384,19 @@ function About() {
           <div className={`${styles.tile} ${styles.tile_25}`}></div>
           <div className={`${styles.tile} ${styles.tile_26}`}></div>
         </div>
-        <motion.h1 animate={item_1_control}>
+        <h1 animate={item_1_control}>
           Our goal is to bridge the gap between artists & fans
-        </motion.h1>
+        </h1>
         <ul>
-          <motion.li animate={item_2_control}>
+          <li animate={item_2_control}>
             ⚡️ Help creators distribute and monetise music on favourable terms
-          </motion.li>
-          <motion.li animate={item_3_control}>
+          </li>
+          <li animate={item_3_control}>
             ⚡️ Enable fans to participate in their favourite artist's journey
-          </motion.li>
-          <motion.li animate={item_4_control}>
+          </li>
+          <li animate={item_4_control}>
             ⚡️ Decentralise the economic model between artists and fans
-          </motion.li>
+          </li>
         </ul>
       </div>
       <div className={`${styles.banner}`}>
@@ -385,7 +404,9 @@ function About() {
           If you're an artist or simply passionate about music, we'd love to
           connect!{" "}
         </p>
-        <Button content="Get in touch" />
+        <a href="mailto:rohan@incentify.club">
+          <Button content="Get in touch" />
+        </a>
       </div>
     </>
   );

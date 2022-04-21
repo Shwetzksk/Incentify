@@ -1,11 +1,13 @@
+@use "../../styles/main.scss" as *;
+
 .textbox {
-  padding: 28px 20px;
+  @include typography-body-2;
   display: flex;
   align-items: center;
-  position: absolute;
   width: fit-content;
   height: fit-content;
-  font-size: 2.8rem;
+  padding: 14px 12px;
+  border-radius: 15px;
   font-weight: 500;
   background: linear-gradient(
     92.32deg,
@@ -17,7 +19,18 @@
   box-shadow: 0px 4px 20px -1px #000000;
   backdrop-filter: blur(20px);
   /* Note: backdrop-filter has minimal browser support */
-
-  border-radius: 25px;
   border: 2.5px solid rgba(110, 69, 226, 0.2);
+  @include screen-mobile-lg-up {
+    padding: 20px 18px;
+  }
+  @include screen-tablet-sm-up {
+    padding: 20px 18px;
+  }
+  @include screen-tablet-lg-up {
+    padding: 25px 20px;
+  }
+  @include screen-laptop-sm-up {
+    border-radius: 25px;
+    padding: 28px 20px;
+  }
 }

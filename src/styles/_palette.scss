@@ -1,0 +1,15 @@
+@mixin dark-purple-gradient {
+  background: linear-gradient(
+    112.65deg,
+    rgba(110, 69, 226, 0.1) 1.05%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+}
+
+@mixin light-purple-gradient {
+  background: linear-gradient(
+    92.32deg,
+    rgba(28, 40, 83, 0.2) 5.7%,
+    rgba(110, 69, 226, 0.3) 96.66%
+  );
+}

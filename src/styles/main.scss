@@ -1,2 +1,4 @@
 @forward "./component" as component-*;
-@forward "./color" as color-*;
+@forward "./palette" as palette-*;
+@forward "./media-queries" as screen-*;
+@forward "./typography" as typography-*;

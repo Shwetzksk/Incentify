@@ -8,7 +8,9 @@ function PostCard(props) {
       {Boolean(props.iconImg) && (
         <img className={`${styles.icon}`} src={props.iconImg} alt="icon img" />
       )}
-      <img src={props.url} alt={props.id} className={`${styles.post}`} />
+      <a href={props.link} target="_blank" rel="noopener noreferrer">
+        <img src={props.url} alt={props.id} className={`${styles.post}`} />
+      </a>
     </div>
   );
 }

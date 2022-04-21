@@ -3,10 +3,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  padding: 2vh 10vw;
+  position: sticky;
+  top: 0;
+  background: rgba(21, 21, 21, 1);
+  padding: 2vh 6vw;
   box-shadow: 0px 4px 20px -1px #000000;
-  z-index: 2;
+  z-index: 10;
+  @media (min-width: 768px) and (max-width: 1440px) {
+    padding: 2vh 25px;
+  }
 }
 
 .logo {
@@ -16,8 +21,13 @@
       width: 120px;
     }
   }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    img {
+      width: 180px;
+    }
+  }
 }
-.menuIcon {
+.menu_icon {
   display: flex;
   flex-direction: column;
   span {
@@ -29,11 +39,41 @@
   @media (min-width: 768px) {
     display: none;
   }
+  transition: transform 0.3s ease-in;
+}
+.close_icon {
+  justify-content: center;
+  align-items: center;
+
+  padding: {
+    right: 10px;
+  }
+  span {
+    position: absolute;
+    transition: transform 0.3s ease-in;
+    &:nth-child(1) {
+      transform: rotate(-40deg);
+    }
+    &:nth-child(2) {
+      display: none;
+    }
+    &:nth-child(3) {
+      transform: rotate(40deg);
+    }
+  }
 }
 .menu_container {
-  display: none;
+  @media (max-width: 768px) {
+    display: none;
+  }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    margin: {
+      left: 60px;
+    }
+  }
   &_mobile {
     @media (max-width: 768px) {
+      z-index: 15;
       background: linear-gradient(
         92.32deg,
         rgba(28, 40, 83, 0.2) 5.7%,
@@ -56,7 +96,7 @@
   justify-content: space-around;
   align-items: center;
   width: auto;
-  @media (max-width: 768px) {
+  @media (max-width: 600px) {
     flex-direction: column;
   }
   div {
@@ -68,19 +108,25 @@
   .links {
     font-size: 2rem;
     font-weight: 500;
-    @media (max-width: 768px) {
+    @media (max-width: 600px) {
       display: flex;
       flex-direction: column;
       margin: {
         bottom: 20px;
       }
     }
+    @media (min-width: 768px) and (max-width: 1024px) {
+      font-size: 1.3rem;
+    }
     div {
       margin: 0 20px;
-      @media (max-width: 768px) {
+      @media (max-width: 600px) {
         width: 100%;
         padding: 10px 5px;
         border-bottom: 1px solid rgba(110, 69, 226, 0.5);
+      }
+      @media (min-width: 768px) and (max-width: 1024px) {
+        margin: 0 10px;
       }
     }
     div:hover {

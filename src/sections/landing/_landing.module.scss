@@ -1,69 +1,179 @@
+@use "../../styles/main.scss" as *;
+
 .container {
-	display: grid;
-	grid-template-columns: repeat(12, minmax(0, 1fr));
-	place-items: center;
-	position: relative;
-	height: 90vh;
-	z-index: 2;
-}
-.container > figure {
-	animation: imageAnimation 18s linear infinite 0s;
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	z-index: 1;
-	background-size: cover;
-	background-position: center;
-}
-.container > figure:nth-child(3) {
-	background-image: url("../../assets/images/collage-1.png");
-	animation-delay: 6s;
-}
-.container > figure:nth-child(2) {
-	background-image: url("../../assets/images/collage-2.png");
-	animation-delay: 12s;
-}
-.container > figure:nth-child(1) {
-	background-image: url("../../assets/images/collage-3.png");
-	animation-delay: 0;
-}
-@keyframes imageAnimation {
-	0% {
-		animation-timing-function: ease-in;
-		opacity: 1;
-	}
-	28% {
-		animation-timing-function: ease-out;
-		opacity: 1;
-	}
-	33% {
-		opacity: 0;
-	}
-	94% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  place-items: center;
+  position: relative;
+  height: 90vh;
+  @include screen-tablet-lg-down {
+    grid-template-rows: repeat(12, minmax(0, 1fr));
+    height: 100vh;
+  }
+  @include screen-tablet-lg-up {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    place-items: center;
+    position: relative;
+    height: 90vh;
+  }
 }
 .content {
-	grid-column: 6/11;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	z-index: 3;
-	h1 {
-		margin-bottom: 23px;
-		text-align: center;
-	}
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+  grid-column: 1/13;
+  h1 {
+    text-align: left;
+    margin: 23px 10vw;
+    @include typography-title;
+  }
+  @include screen-tablet-lg-down {
+    grid-row: 1/4;
+  }
+  @include screen-tablet-sm-up {
+    h1 {
+      text-align: center;
+    }
+  }
+  @include screen-tablet-lg-up {
+    grid-column: 5/13;
+    grid-row: 1/13;
+    h1 {
+      margin: {
+        left: 30px;
+        right: 0;
+        bottom: 23px;
+      }
+    }
+  }
+  @include screen-laptop-sm-up {
+    grid-column: 6/12;
+    h1 {
+      margin: {
+        left: 0;
+        right: 0;
+        bottom: 23px;
+      }
+    }
+  }
+  @include screen-laptop-lg-up {
+    grid-column: 6/11;
+    h1 {
+      margin: {
+        left: 0;
+        right: 0;
+        bottom: 23px;
+      }
+    }
+  }
+}
+
+.desk_btn {
+  display: none;
+  @include screen-tablet-lg-up {
+    display: flex;
+  }
+}
+.mobile_btn {
+  @include screen-tablet-lg-down {
+    display: block;
+    grid-column: 1/13;
+    grid-row: 10/13;
+    z-index: 1;
+  }
+  @include screen-tablet-lg-up {
+    display: none;
+  }
 }
 .phone {
-	grid-column: 3/6;
-	width: 50vw;
-	z-index: 3;
-	img {
-		width: 100%;
-	}
+  z-index: 3;
+  grid-column: 1/13;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  img {
+    height: 55vh;
+    animation: up-down 3s ease infinite;
+  }
+  @include screen-tablet-lg-down {
+    grid-row: 5/10;
+  }
+  @include screen-mobile-md-up {
+    img {
+      height: 55vh;
+    }
+  }
+  @include screen-tablet-lg-up {
+    grid-column: 2/5;
+    grid-row: 1/13;
+    display: flex;
+    justify-content: center;
+    img {
+      height: 45vh;
+    }
+  }
+  @include screen-laptop-sm-up {
+    grid-column: 3/6;
+    width: 50vw;
+    img {
+      height: 65vh;
+    }
+  }
+}
+
+.container > figure {
+  animation: imageAnimation 18s linear infinite 0s;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 1;
+  background-size: cover;
+  background-position: center;
+}
+.container > figure:nth-child(3) {
+  background-image: url("../../assets/images/collage-1.png");
+  animation-delay: 6s;
+}
+.container > figure:nth-child(2) {
+  background-image: url("../../assets/images/collage-2.png");
+  animation-delay: 12s;
+}
+.container > figure:nth-child(1) {
+  background-image: url("../../assets/images/collage-3.png");
+  animation-delay: 0;
+}
+@keyframes imageAnimation {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 1;
+  }
+  28% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  33% {
+    opacity: 0;
+  }
+  94% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes up-down {
+  0% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translate(0, 8px);
+  }
+  100% {
+    transform: translate(0);
+  }
 }

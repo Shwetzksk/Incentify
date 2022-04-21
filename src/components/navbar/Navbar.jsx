@@ -4,18 +4,28 @@ import { Link } from "react-router-dom";
 import styles from "./_navbar.module.scss";
 import SocialMedias from "../social-medias/Social-medias";
 
-function Links() {
+function Links(props) {
   return (
     <div className={styles.menu}>
       <div className={styles.links}>
-        <div>
+        <div onClick={props.onClose}>
           <a href="#introducing-club">Introducing Clubs ⚡</a>
         </div>
-        <div>
-          <Link to="/about">About</Link>
+        <div onClick={props.onClose}>
+          <Link to="/about">About Us</Link>
         </div>
-        <div>Blog</div>
-        <div>Contact</div>
+        <div onClick={props.onClose}>
+          <a
+            href="https://medium.com/@clubincentify"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Blog
+          </a>
+        </div>
+        <div onClick={props.onClose}>
+          <a href="mailto:rohan@incentify.club">Contact</a>
+        </div>
       </div>
       <SocialMedias />
     </div>
@@ -30,7 +40,10 @@ export default function Navbar() {
           <img src={IncentifyLogo} alt="inentify logo" />
         </Link>
       </div>
-      <div className={`${styles.menuIcon}`}>
+      <div
+        className={`${styles.menu_icon} ${showMenu ? styles.close_icon : ""}`}
+        onClick={() => setShowMenu(!showMenu)}
+      >
         <span></span>
         <span></span>
         <span></span>
@@ -40,7 +53,7 @@ export default function Navbar() {
           showMenu && styles.menu_container_mobile
         }`}
       >
-        <Links />
+        <Links onClose={() => setShowMenu(false)} />
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
 @use "../../styles/main.scss" as *;
 
+//------- common styles --------
 %text-box {
   padding: 20px 20px;
   display: flex;
@@ -7,7 +8,6 @@
   width: fit-content;
   height: fit-content;
   text-align: left;
-  font-size: 2.3rem;
   font-weight: 500;
   background: linear-gradient(
     92.32deg,
@@ -23,76 +23,195 @@
   border-radius: 25px;
   border: 2.5px solid rgba(110, 69, 226, 0.2);
 }
-.title {
-  font-size: 6.5rem;
-}
-.container {
-  padding: 0 160px;
-  position: relative;
-  &::before {
-    content: "";
-    position: fixed;
-    z-index: -1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100vh;
-    background: url("../../assets/images/concert.png") center top;
-    background-size: cover;
-  }
-}
-.section {
+%section {
   overflow: hidden;
-  height: 100vh;
-  &_1 {
-    padding: 3% 0;
-  }
-  &_2 {
-  }
-  &_3 {
-  }
-  &_4 {
-    height: auto;
-  }
-}
-.section_container {
-  position: relative;
-  padding: 3% 0;
-  width: 100%;
   display: flex;
   align-items: center;
+  @include screen-tablet-sm-up {
+    padding: 35px 0;
+  }
+  @include screen-tablet-md-up {
+    padding: 40px 0;
+  }
+  @include screen-laptop-sm-up {
+    padding: 60px 0;
+  }
+}
+.title {
+  @include typography-title;
+  text-align: center;
+  margin: 50px 0 40px 0;
+  @include screen-laptop-sm-up {
+    text-align: left;
+    margin: {
+      top: 6vh;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+}
+// --------------- container ------------
+.container {
+  position: relative;
+  width: 100%;
+  padding: 0;
+  height: 100vh;
+  background: url("../../assets/images/concert.png") center top;
+  background-size: cover;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  @include screen-laptop-sm-up {
+    padding: 0 100px;
+    width: auto;
+  }
+  @include screen-laptop-lg-up {
+    padding: 0 160px;
+  }
+}
+
+.section_container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: space-around;
+  @include screen-laptop-sm-up {
+    flex-direction: row;
+  }
 }
 .text_box {
   @extend %text-box;
   p {
-    margin: 15px 0;
-    font-size: 2rem;
+    @include typography-body-4;
+    margin: 7.5px 0;
     font-weight: 400;
     text-align: left;
+    @include screen-laptop-sm-up {
+      margin: 15px 0;
+    }
   }
   &_1 {
-    width: 500px;
+    width: 90vw;
+    @include screen-tablet-sm-up {
+      width: 420px;
+    }
+    @include screen-tablet-md-up {
+      width: 450px;
+    }
+    @include screen-laptop-sm-up {
+      width: 500px;
+    }
   }
   &_2 {
-    width: 502px;
+    width: 90vw;
+    @include screen-tablet-sm-up {
+      width: 380px;
+    }
+    @include screen-tablet-md-up {
+      width: 400px;
+    }
+    @include screen-laptop-md-up {
+      width: 430px;
+    }
+    @include screen-laptop-lg-up {
+      width: 502px;
+    }
   }
   &_3 {
-    width: 560px;
+    width: 90vw;
+    padding: {
+      left: 0;
+      right: 0;
+    }
+    @include screen-tablet-sm-up {
+      width: 450px;
+    }
+    @include screen-tablet-md-up {
+      width: 480px;
+    }
+    @include screen-laptop-sm-up {
+      width: 560px;
+    }
+    p {
+      padding: 2px 20px;
+    }
+    ul {
+      list-style: none;
+      background: var(--black-dark);
+      padding: 0 20px;
+      box-shadow: 0px 4px 20px -1px rgba(0, 0, 0, 0.56);
+      backdrop-filter: blur(75px);
+      border-top: 2.5px solid rgba(110, 69, 226, 0.2);
+      border-bottom: 2.5px solid rgba(110, 69, 226, 0.2);
+      li {
+        display: flex;
+        align-items: center;
+        padding: 1.5px 0;
+        span {
+          @include typography-body-4;
+        }
+        p {
+          padding: {
+            left: 10px;
+          }
+        }
+      }
+    }
   }
 }
+//------------------ section 1 ------------------
 .section_1 {
+  @extend %section;
+  display: flex;
+  align-items: center;
+  height: auto;
+  padding: {
+    top: 0;
+    bottom: 0;
+  }
+  @include screen-tablet-sm-up {
+    padding: {
+      top: 30px;
+    }
+  }
+  @include screen-laptop-sm-up {
+    padding: {
+      top: 50px;
+      bottom: 60px;
+    }
+  }
   .section_container {
-    display: grid;
-    grid-template-columns: repeat(12, minmax(0, 1fr));
-    place-items: center start;
+    display: flex;
+    flex-direction: column;
+
+    @include screen-laptop-sm-up {
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      place-items: center start;
+    }
   }
   .right {
     grid-column: 7/13;
-    width: 100%;
-    height: 100%;
     position: relative;
     transition: transform 0.6s 0.6s ease-in;
+    width: 100vw;
+    height: 70vh;
+    @include screen-tablet-sm-up {
+      height: 38vh;
+    }
+    @include screen-tablet-md-up {
+      height: 28vh;
+    }
+    @include screen-laptop-sm-up {
+      width: 100%;
+      height: 100%;
+    }
     .brandLogo {
       position: absolute;
       transition: transform 0.6s ease-in;
@@ -100,22 +219,90 @@
       left: 50%;
       transform: translate(-50%, -50%);
       &_amazonmusic {
-        transform: translate(-220%, -200%);
+        transform: translate(-130%, -230%);
       }
       &_spotify {
-        transform: translate(10%, -180%);
+        transform: translate(10%, -220%);
       }
       &_applemusic {
         transform: translate(-100%, -80%);
       }
       &_youtubemusic {
-        transform: translate(10%, 20%);
+        transform: translate(-25%, 35%);
       }
       &_tidal {
-        transform: translate(-150%, 60%);
+        transform: translate(-110%, 90%);
       }
       &_deezer {
-        transform: translate(-20%, 240%);
+        transform: translate(-10%, 320%);
+      }
+      @include screen-mobile-md-up {
+        &_amazonmusic {
+          transform: translate(-130%, -230%);
+        }
+        &_spotify {
+          transform: translate(10%, -220%);
+        }
+        &_applemusic {
+          transform: translate(-120%, -80%);
+        }
+        &_youtubemusic {
+          transform: translate(-15%, 20%);
+        }
+        &_tidal {
+          transform: translate(-130%, 80%);
+        }
+        &_deezer {
+          transform: translate(-10%, 260%);
+        }
+      }
+      @include screen-tablet-sm-up {
+        &_amazonmusic {
+          transform: translate(-180%, -230%);
+        }
+        &_spotify {
+          transform: translate(16%, -220%);
+        }
+        &_applemusic {
+          transform: translate(-140%, -80%);
+        }
+        &_youtubemusic {
+          transform: translate(10%, 0%);
+        }
+        &_tidal {
+          transform: translate(-160%, 90%);
+        }
+        &_deezer {
+          transform: translate(25%, 250%);
+        }
+      }
+      @include screen-tablet-md-up {
+        &_youtubemusic {
+          transform: translate(10%, 35%);
+        }
+        &_deezer {
+          transform: translate(20%, 320%);
+        }
+      }
+      @include screen-laptop-sm-up {
+        &_amazonmusic {
+          transform: translate(-220%, -200%);
+        }
+        &_spotify {
+          transform: translate(10%, -180%);
+        }
+        &_applemusic {
+          transform: translate(-100%, -80%);
+        }
+        &_youtubemusic {
+          transform: translate(10%, 20%);
+        }
+        &_tidal {
+          transform: translate(-150%, 60%);
+        }
+        &_deezer {
+          transform: translate(-20%, 240%);
+        }
       }
     }
   }
@@ -123,22 +310,75 @@
     grid-column: 1/7;
   }
 }
+
+//-------------------------- section 2 ----------------
 .section_2 {
-  display: flex;
-  align-items: center;
-}
-.section_3 {
-  .right {
-    margin: auto 0;
+  @extend %section;
+  .section_container {
+    display: flex;
+    flex-direction: column-reverse;
+    @include screen-laptop-sm-up {
+      flex-direction: row;
+    }
+  }
+  .left {
+    margin: 0 10px;
     img {
-      width: 300px;
+      width: 90vw;
+    }
+    @include screen-tablet-sm-up {
+      img {
+        width: auto;
+      }
+    }
+  }
+}
+
+//----------------------------section 3 -------------------------
+.section_3 {
+  @extend %section;
+  padding: {
+    bottom: 100px;
+  }
+  .right {
+    margin: auto;
+    img {
+      width: 200px;
+    }
+    @include screen-tablet-sm-up {
+      img {
+        width: 250px;
+      }
+    }
+    @include screen-tablet-lg-up {
+      img {
+        width: 280px;
+      }
+    }
+    @include screen-laptop-sm-up {
+      margin: {
+        top: auto;
+        bottom: auto;
+        right: 120px;
+      }
+      img {
+        width: 230px;
+      }
     }
   }
   .left {
     grid-column: 1/8;
   }
+  @media (max-width: 576px) {
+    padding: {
+      top: 100px;
+      bottom: 100px;
+    }
+  }
 }
+//--------------------- section 4 -----------------------
 .section_4 {
+  @extend %section;
   position: relative;
   padding: {
     top: 3%;
@@ -148,16 +388,35 @@
   flex-direction: column;
   align-items: center;
   h1 {
-    font-size: 4.5rem;
+    @include typography-header-3;
     text-align: center;
+    @include screen-tablet-sm-up {
+      padding: {
+        left: 40px;
+        right: 40px;
+      }
+    }
+    @include screen-tablet-md-up {
+      padding: {
+        left: 90px;
+        right: 90px;
+      }
+    }
   }
   ul {
-    margin: 50px auto 20px auto;
+    margin: 10px 10px;
     list-style: none;
     li {
-      text-align: left;
-      font-size: 2.8rem;
+      @include typography-body-1;
+      text-align: center;
       margin: 25px 0;
+      @include screen-laptop-sm-up {
+        text-align: left;
+        margin: 25px 0;
+      }
+    }
+    @include screen-laptop-sm-up {
+      margin: 50px auto 20px auto;
     }
   }
 }
@@ -171,10 +430,11 @@
 }
 .tile {
   @include component-tile;
-  @include color-light-purple-gradient;
-  @include color-purpleBorder;
+  @include palette-light-purple-gradient;
+  @include component-purpleBorder;
   position: absolute;
   top: 0;
+
   &_1,
   &_2,
   &_3,
@@ -221,7 +481,7 @@
   &_26,
   &_25,
   &_27 {
-    @include color-dark-purple-gradient;
+    @include palette-dark-purple-gradient;
   }
   &_1 {
     transform: translate(0, 70px);
@@ -301,6 +561,58 @@
   &_26 {
     transform: translate(-185px, 375px);
   }
+  &_4,
+  &_3,
+  &_20,
+  &_8,
+  &_6,
+  &_5,
+  &_18,
+  &_12,
+  &_14,
+  &_15,
+  &_16,
+  &_17,
+  &_21,
+  &_26,
+  &_24 {
+    display: none;
+  }
+  @include screen-mobile-lg-up {
+    &_4,
+    &_3,
+    &_20,
+    &_8,
+    &_12,
+    &_14,
+    &_15,
+    &_16,
+    &_17,
+    &_21,
+    &_26,
+    &_24 {
+      display: block;
+    }
+  }
+  @include screen-laptop-sm-up {
+    &_4,
+    &_3,
+    &_20,
+    &_8,
+    &_6,
+    &_5,
+    &_18,
+    &_12,
+    &_14,
+    &_15,
+    &_16,
+    &_17,
+    &_21,
+    &_26,
+    &_24 {
+      display: block;
+    }
+  }
 }
 .banner {
   display: flex;
@@ -309,11 +621,25 @@
   background: linear-gradient(360deg, #1c2853 0%, #6e45e2 147.36%);
   width: 100%;
   padding: 10px 0;
-
+  flex-direction: column;
   p {
-    font-size: 2.8rem;
+    @include typography-body-2;
+    text-align: center;
     margin: {
-      right: 30px;
+      right: 10px;
+      left: 10px;
+      bottom: 10px;
+    }
+  }
+  @include screen-laptop-sm-up {
+    flex-direction: row;
+    p {
+      text-align: left;
+      margin: {
+        right: 30px;
+        left: 0;
+        bottom: 0;
+      }
     }
   }
 }
